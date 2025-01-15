@@ -8,8 +8,7 @@ export default function Users() {
 
     const users = useContext(user)
     const token = users.auth.token
-    console.log(users)
-    console.log(token)
+
     const [userData, setData] = useState([])
     const [runUf, setRun] = useState(0)
 
