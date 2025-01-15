@@ -1,0 +1,40 @@
+.parintUp {
+
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+
+}
+
+input {
+    margin: 10px 0;
+}
+
+.buttonUp {
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: lightblue;
+    padding: 5px 10px;
+    width: 150px;
+    margin: auto;
+}
+
+.formUp {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    gap: 5px;
+    box-shadow: 4px 0px 11px 3px gray;
+}
+
+.error {
+    color: red;
+    font-size: 13px;
+}
