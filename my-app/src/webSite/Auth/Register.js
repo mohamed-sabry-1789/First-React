@@ -41,10 +41,10 @@ export default function SignUp() {
         } catch (err) {
             if (err.status === 422) {
 
-                setMgsN(err.response.data.errors.name)
-                setMgsP(err.response.data.errors.password?.[1])
-                setMgsR(err.response.data.errors.password?.[0])
-                setMgsM(err.response.data.errors.email)
+                setMgsN(err.response.data.errors?.name?.[0])
+                setMgsP(err.response.data.errors?.password?.[1])
+                setMgsR(err.response.data.errors?.password?.[0])
+                setMgsM(err.response.data.errors?.email?.[0])
 
             }
             // Optional Chaining
