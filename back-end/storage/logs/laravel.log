@@ -4909,3 +4909,11 @@ Did you mean this?
 #31 D:\\my project\\test react 2\\back-end\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('D:\\\\my project\\\\t...')
 #32 {main}
 "} 
+[2025-01-15 14:21:16] local.ERROR: Maximum execution time of 60 seconds exceeded {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Maximum execution time of 60 seconds exceeded at D:\\my project\\test react 2\\back-end\\vendor\\laravel\\framework\\src\\Illuminate\\Contracts\\Auth\\StatefulGuard.php:5)
+[stacktrace]
+#0 {main}
+"} 
+[2025-01-15 14:22:19] local.ERROR: Maximum execution time of 60 seconds exceeded {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Maximum execution time of 60 seconds exceeded at D:\\my project\\test react 2\\back-end\\vendor\\composer\\ClassLoader.php:429)
+[stacktrace]
+#0 {main}
+"} 

@@ -12,7 +12,11 @@ export default function SignUp() {
     const [password, setPassword] = useState("")
     const [rePassword, setRe] = useState("")
     const [enter, setEnter] = useState(false)
-    const [msg, setMgs] = useState("")
+    const [msgN, setMgsN] = useState("")
+    const [msgP, setMgsP] = useState("")
+    const [msgR, setMgsR] = useState("")
+    const [msgM, setMgsM] = useState("")
+
     const users = useContext(user)
     const nav = useNavigate()
     const cookie = new Cookies()
@@ -36,12 +40,21 @@ export default function SignUp() {
 
         } catch (err) {
             if (err.status === 422) {
-                setMgs(err.response.data.message)
+
+                setMgsN(err.response.data.errors.name)
+                setMgsP(err.response.data.errors.password?.[1])
+                setMgsR(err.response.data.errors.password?.[0])
+                setMgsM(err.response.data.errors.email)
+
             }
+            // Optional Chaining
+
 
         }
 
     }
+
+
     return (
         <div>
             <Header />
@@ -52,21 +65,23 @@ export default function SignUp() {
                     <input value={name} onChange={(e) => {
                         setName(e.target.value)
                     }} type="text" placeholder='name' />
+                    {enter && <p className='error'>{msgN}</p>}
+
                     <label>Email : </label>
                     <input value={email} onChange={(e) => {
                         setEmail(e.target.value)
                     }} type="email" placeholder='email' />
-
+                    {enter && <p className='error'>{msgM}</p>}
                     <label>Password : </label>
                     <input value={password} onChange={(e) => {
                         setPassword(e.target.value)
                     }} type="password" placeholder='password' />
-
+                    {enter && <p className='error'>{msgP}</p>}
                     <label> Repeat Password : </label>
                     <input value={rePassword} onChange={(e) => {
                         setRe(e.target.value)
                     }} type="password" placeholder='re password' />
-                    {enter && <p className='error'>{msg}</p>}
+                    {enter && <p className='error'>{msgR}</p>}
                     <button type='submit' className='buttonUp'>Register</button>
                 </form>
             </div>
